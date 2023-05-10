@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package EnvironmentGrpc;
+
+service Environment {  
+    rpc Register (Registration) returns (Successed) {}
+    rpc Login(LoginUser) returns (User) {}
+    rpc ActivateService (ServiceToActivate) returns (Successed) {}
+}
+
+//message Empty {}
+
+message Registration {
+    string email = 1;
+    string firstName = 2;
+    string lastName = 3;
+    string password = 4;
+}
+
+message Successed {
+    bool successed = 1;
+}
+
+message LoginUser {
+    string email = 1;
+    string password = 2;
+}
+
+
+message User {
+    string email = 1;
+    string firstName = 2;
+    string lastName = 3;
+}
+
+message ServiceToActivate {
+    string binId = 1;
+    string adminId = 2;
+    string serviceId = 3;
+}
