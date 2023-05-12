@@ -7,7 +7,6 @@ use acteur::{Acteur};
 use tonic::{
     Request, Response, Status
 };
-use tracing::{info};
 use bollard::{
     Docker,
     image::CreateImageOptions,

@@ -8,14 +8,15 @@ edition = "2021"
 [dependencies]
 tokio = {version = "1.26", features = ["macros", "rt-multi-thread"]} 
 api_server = {version = "0.1", path = "packages/api_server", default-features = true }
+nanan_web_api = {version = "0.1", path = "packages/nanan_web_api", default-features = true }
 tracing = "0.1.26"
 tracing-subscriber = "0.3.1"
 tonic = {version = "0.8", default-features = false, features = ["prost", "codegen", "tls", "tls-roots", "tls-webpki-roots"]}
-
-
+hyper = "0.14"
 
 [workspace]
 members = [
     "packages/api_server",
+    "packages/nanan_web_api",
 ]
 
