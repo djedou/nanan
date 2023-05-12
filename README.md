@@ -1,4 +1,4 @@
-# nanan
+# Nanan: Docker Containers Orchestrator in Rust
 
 # Steps:  
 ## Zookeeper:  
